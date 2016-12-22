@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">dtmb</string>
+    <string-array name="left_menu">
+        <item>广播管控</item>
+        <item>终端管理</item>
+        <item>监控查询</item>
+        <item>系统管理</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="word_live">文字直播</string>
+    <string name="program_bp">节目编排</string>
+    <string name="test_control">测试控制</string>
+</resources>

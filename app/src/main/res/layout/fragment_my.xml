@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".80"
+                android:padding="10dp"
+                android:src="@drawable/broadcast_control_01"/>
+            <TextView
+                android:gravity="center"
+                android:text="@string/word_live"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".80"
+                android:src="@drawable/broadcast_control_03"/>
+            <TextView
+                android:gravity="center"
+                android:text="@string/program_bp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".80"
+                android:src="@drawable/broadcast_control_04"/>
+            <TextView
+                android:gravity="center"
+                android:text="@string/test_control"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
