@@ -9,7 +9,7 @@
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight=".30"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
@@ -19,17 +19,17 @@
                 android:layout_height="0dp"
                 android:layout_weight=".80"
 
-                android:src="@drawable/broadcast_control_01"/>
+                android:src="@drawable/system_manager_01"/>
             <TextView
                 android:gravity="center"
-                android:text="@string/word_live"
+                android:text="用户管理"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".20"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight=".30"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
@@ -38,34 +38,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".80"
-                android:src="@drawable/broadcast_control_03"/>
+                android:src="@drawable/system_manager_02"/>
             <TextView
                 android:gravity="center"
-                android:text="@string/program_bp"
+                android:text="组织管理"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".20"/>
         </LinearLayout>
-        <LinearLayout
+        <View
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:clickable="true"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".80"
-                android:src="@drawable/broadcast_control_04"/>
-            <TextView
-                android:gravity="center"
-                android:text="@string/test_control"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".20"/>
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"></View>
     </LinearLayout>
 
 </LinearLayout>

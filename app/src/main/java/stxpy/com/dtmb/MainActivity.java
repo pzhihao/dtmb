@@ -15,6 +15,8 @@ import butterknife.ButterKnife;
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
 import stxpy.com.fragment.BrodcastFragment;
+import stxpy.com.fragment.MonitorFragment;
+import stxpy.com.fragment.SystemManagerFragment;
 import stxpy.com.fragment.device_managerFragment;
 import stxpy.com.myinterface.OnLeftMenuClickListener;
 
@@ -29,7 +31,7 @@ public class MainActivity extends SupportActivity implements OnLeftMenuClickList
 
     String[] stringArray=null;
     ArrayAdapter arrayAdapter;
-    SupportFragment mFragments[]=new SupportFragment[2];
+    SupportFragment mFragments[]=new SupportFragment[4];
 
     SupportFragment currentfragment;
     int index=0;
@@ -65,13 +67,17 @@ public class MainActivity extends SupportActivity implements OnLeftMenuClickList
         if (savedInstanceState == null){
                 mFragments[0]=new BrodcastFragment();
                 mFragments[1]=new device_managerFragment();
+                mFragments[2]=new MonitorFragment();
+                mFragments[3]=new SystemManagerFragment();
 
-                loadMultipleRootFragment(R.id.content_frame,0,mFragments[0],mFragments[1]);
+                loadMultipleRootFragment(R.id.content_frame,0,mFragments[0],mFragments[1],mFragments[2],mFragments[3]);
 
 
         }else {
             mFragments[0]=findFragment(BrodcastFragment.class);
             mFragments[1]=findFragment(device_managerFragment.class);
+            mFragments[2]=findFragment(MonitorFragment.class);
+            mFragments[3]=findFragment(SystemManagerFragment.class);
         }
 
     }

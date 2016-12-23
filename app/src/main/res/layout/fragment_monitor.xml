@@ -13,16 +13,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
-                android:padding="10dp"
                 android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".80"
-
-                android:src="@drawable/broadcast_control_01"/>
+                android:padding="10dp"
+                android:src="@drawable/monitor_query_01"/>
             <TextView
                 android:gravity="center"
-                android:text="@string/word_live"
+                android:text="电话播出查询"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".20"/>
@@ -38,10 +37,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".80"
-                android:src="@drawable/broadcast_control_03"/>
+                android:src="@drawable/monitor_query_02"/>
             <TextView
                 android:gravity="center"
-                android:text="@string/program_bp"
+                android:text="直播查询"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".20"/>
@@ -58,10 +57,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".80"
-                android:src="@drawable/broadcast_control_04"/>
+                android:src="@drawable/monitor_query_03"/>
             <TextView
                 android:gravity="center"
-                android:text="@string/test_control"
+                android:text="登录查询"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".20"/>
