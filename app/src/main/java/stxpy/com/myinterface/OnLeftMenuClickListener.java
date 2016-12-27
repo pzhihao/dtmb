@@ -7,5 +7,5 @@ import me.yokeyword.fragmentation.SupportFragment;
  */
 
 public interface OnLeftMenuClickListener {
-    void onLeftMenuClick(SupportFragment supportFragment);
+    void onLeftMenuClick();
 }

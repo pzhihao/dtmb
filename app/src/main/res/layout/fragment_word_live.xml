@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    tools:context="stxpy.com.fragment.broadcast.child.WordLiveFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/toolbar"></include>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+
+                <TableRow
+                   android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/table_frame_gray"
+                    >
+                    <TextView
+                        android:gravity="center_vertical|right"
+                        android:textSize="18sp"
+                        android:text="连续播放次数:"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent">
+                    </TextView>
+                    <Spinner
+                        android:id="@+id/playtime_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                    </Spinner>
+                </TableRow>
+                <TableRow
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/table_frame_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    >
+                    <TextView
+                        android:gravity="center_vertical|right"
+                        android:textSize="18sp"
+                        android:text="优先级别:"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent">
+                    </TextView>
+                    <Spinner
+                        android:id="@+id/playtime_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                    </Spinner>
+                </TableRow>
+                <TableRow
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/table_frame_gray"
+                    >
+                    <TextView
+                        android:gravity="center_vertical|right"
+                        android:textSize="18sp"
+                        android:text="选取播放乡镇:"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent">
+                    </TextView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+
+                    >
+                    <TextView
+                        android:gravity="center_vertical|right"
+                        android:textSize="18sp"
+                        android:text="播放内容:"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent">
+                    </TextView>
+                    <EditText
+                        android:id="@+id/et_content"
+                        android:inputType="textMultiLine"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left|top"
+                        android:minLines="6"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+                    <com.indris.material.RippleView
+                        android:layout_span="2"
+                        android:id="@+id/btn"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="120dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="发送"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:background="@drawable/card_bk"
+                        android:gravity="center"
+                        android:padding="25dp"
+                        ripple:alphaFactor="0.7"
+                        ripple:rippleColor="#58FAAC"
+                        ripple:hover="true"
+                        />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

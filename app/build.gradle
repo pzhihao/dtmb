@@ -36,4 +36,5 @@ dependencies {
     compile 'me.yokeyword:fragmentation-swipeback:0.7.9'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile project(':rippleView')
 }

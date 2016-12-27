@@ -3,36 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="stxpy.com.fragment.baseFragment">
+    tools:context="stxpy.com.fragment.base.baseFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <include layout="@layout/toolbar"></include>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/gk_toolbar"
-            android:background="@color/colorPrimary"
-            app:theme="@style/ToolbarTheme"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:navigationIcon="@mipmap/ic_launcher"
-            app:navigationIcon="@mipmap/ic_launcher">
-            <TextView
-                android:id="@+id/toolbar_title"
-                android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </android.support.v7.widget.Toolbar>
-
-        <FrameLayout
-            android:id="@+id/mycontent_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </FrameLayout>
-
-    </LinearLayout>
 
 </FrameLayout>
