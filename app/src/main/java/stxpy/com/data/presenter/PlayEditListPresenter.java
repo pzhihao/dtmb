@@ -7,12 +7,18 @@ import org.reactivestreams.Subscription;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import stxpy.com.bean.PlayEditBean;
 import stxpy.com.constant.URL;
+
+import stxpy.com.dagger.component.DaggerHttpComponent;
+import stxpy.com.dagger.component.HttpComponent;
+import stxpy.com.dagger.module.HttpModule;
 import stxpy.com.data.view.PlayEditListView;
 import stxpy.com.service.PlayEditService;
 
@@ -21,21 +27,33 @@ import stxpy.com.service.PlayEditService;
  */
 
 public class PlayEditListPresenter {
+
+
     private PlayEditListView playEditListView;
+    @Inject
+    PlayEditService editService;
 
     public PlayEditListPresenter(PlayEditListView playEditListView) {
         this.playEditListView = playEditListView;
+        HttpComponent build = DaggerHttpComponent.builder().httpModule(new HttpModule()).build();
+        build.inject(this);
     }
 
     public void getPlayEditList(String orgid, String selectedorgid, String state){
+
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(URL.baseURL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
         playEditListView.getPlayEditListbefore();
+
+
+
         PlayEditService playEditService = retrofit.create(PlayEditService.class);
-        playEditService.getplayeditlist(orgid,selectedorgid,state)
+
+        editService.getplayeditlist(orgid,selectedorgid,state)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<List<PlayEditBean>>() {
