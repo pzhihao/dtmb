@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import me.yokeyword.fragmentation.SupportFragment;
+import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
+import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import stxpy.com.dtmb.R;
 
 /**
@@ -38,7 +42,7 @@ public class WordLiveFragment extends SupportFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_word_live, container, false);
@@ -48,6 +52,26 @@ public class WordLiveFragment extends SupportFragment {
 
         EditText editText= (EditText) view.findViewById(R.id.et_content);
         editText.setHorizontallyScrolling(false);
+        EditText town_et= (EditText) view.findViewById(R.id.my_town);
+        town_et.setClickable(true);
+        town_et.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textView=new TextView(_mActivity);
+                textView.setText("哈哈");
+                LayoutInflater from = LayoutInflater.from(_mActivity);
+                View inflate = from.inflate(R.layout.dialog_listview, container, false);
+
+                AlertDialog dialog=new AlertDialog.Builder(_mActivity).setTitle("选择乡镇").setPositiveButton("确定",null).create();
+
+
+
+                dialog.setView(inflate);
+
+                dialog.show();
+
+            }
+        });
 
         initData(view);
 
@@ -73,20 +97,7 @@ public class WordLiveFragment extends SupportFragment {
         spinner.setAdapter(arrayAdapter);
     }
 
-    public void showDialog(final TextView v){
-        new AlertDialog.Builder(_mActivity)
-                .setTitle("选择播放次数")
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .setSingleChoiceItems(new String[]{"1", "2", "3"}, playtimeindex, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        playtimeindex=which;
-                        v.setText(String.valueOf(playtimeindex+1));
-                    }
-                }).setNegativeButton("取消",null)
-                .setPositiveButton("确定", null)
-                .show();
-    }
+
 
     private void initToolbar(View v) {
         Toolbar toolbar= (Toolbar)v.findViewById(R.id.gk_toolbar);
@@ -95,12 +106,17 @@ public class WordLiveFragment extends SupportFragment {
             @Override
             public void onClick(View v) {
                 pop();
+                hideSoftInput();
             }
         });
        TextView t= (TextView) toolbar.findViewById(R.id.toolbar_title);
         t.setText("文字直播");
     }
 
+    @Override
+    protected FragmentAnimator onCreateFragmentAnimator() {
+        return new DefaultHorizontalAnimator();
+    }
 
     //拦截按键，弹栈弹出fragment模拟后退
     @Override

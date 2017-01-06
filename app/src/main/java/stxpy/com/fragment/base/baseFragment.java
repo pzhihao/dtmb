@@ -17,7 +17,7 @@ import stxpy.com.dtmb.R;
 import stxpy.com.myinterface.OnLeftMenuClickListener;
 
 /**
- * A simple {@link Fragment} subclass.
+ *Home页Fragment的基类
  */
 public class baseFragment extends SupportFragment{
 

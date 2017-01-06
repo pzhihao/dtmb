@@ -27,6 +27,8 @@ public class SystemmanagerHomeFragment extends baseFragment {
                              Bundle savedInstanceState) {
        View view=inflater.inflate(R.layout.fragment_system_manager,container,false);
        Toolbar toolbar= (Toolbar) view.findViewById(R.id.gk_toolbar);
+        toolbar.setTitle("系统管理");
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         initToolBarNav(toolbar);
         return view;
     }

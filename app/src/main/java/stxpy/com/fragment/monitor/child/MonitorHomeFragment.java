@@ -29,6 +29,8 @@ public class MonitorHomeFragment extends baseFragment {
 
         View view=inflater.inflate(R.layout.fragment_monitor,container,false);
         Toolbar toolbar= (Toolbar) view.findViewById(R.id.gk_toolbar);
+        toolbar.setTitle("监控查询");
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         initToolBarNav(toolbar);
 
         return view;

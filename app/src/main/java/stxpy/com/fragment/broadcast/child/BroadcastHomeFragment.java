@@ -32,7 +32,8 @@ public class BroadcastHomeFragment extends baseFragment {
         view=inflater.inflate(R.layout.fragment_broadcast_home, container, false);
 
         Toolbar toolbar= (Toolbar) view.findViewById(R.id.gk_toolbar);
-
+        toolbar.setTitle("广播管控");
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         initToolBarNav(toolbar);
 
         return view;
@@ -58,10 +59,10 @@ public class BroadcastHomeFragment extends baseFragment {
                         start(new WordLiveFragment());
                         break;
                     case R.id.programbp:
-
+                        start(new ProgramFragment());
                         break;
                     case R.id.testControl:
-
+                        start(TestControlFragment.newInstance("第一","第二"));
                         break;
                 }
             }

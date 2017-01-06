@@ -16,12 +16,14 @@
             android:layout_height="120dp"
             android:orientation="horizontal">
             <LinearLayout
+                android:id="@+id/phone_query"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <ImageView
-                    android:clickable="true"
+
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".80"
@@ -35,12 +37,14 @@
                     android:layout_weight=".20"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/device_position"
+                android:clickable="true"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <ImageView
-                    android:clickable="true"
+
                     android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -54,13 +58,14 @@
                     android:layout_weight=".20"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/device_status_query"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:clickable="true"
+
                     android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
