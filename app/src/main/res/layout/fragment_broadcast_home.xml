@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="stxpy.com.fragment.broadcast.child.BroadcastHomeFragment">
+    tools:context="stxpy.stxpy.fragment.broadcast.child.BroadcastHomeFragment">
 
     <include layout="@layout/toolbar"></include>
 

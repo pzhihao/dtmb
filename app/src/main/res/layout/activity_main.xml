@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="stxpy.com.dtmb.MainActivity">
+    tools:context="stxpy.stxpy.dtmb.stxpy.stxpy1.dtmb.MainActivity">
 
     <FrameLayout
         android:id="@+id/content_frame"

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="stxpy.com.fragment.base.baseFragment">
+    tools:context="stxpy.stxpy.fragment.base.baseFragment">
 
     <!-- TODO: Update blank fragment layout -->
         <include layout="@layout/toolbar"></include>
