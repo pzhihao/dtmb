@@ -4,6 +4,7 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import com.stxpy.dagger.module.HttpModule;
+import com.stxpy.data.presenter.LoginPresenter;
 import com.stxpy.data.presenter.PlayEditListPresenter;
 
 /**
@@ -14,4 +15,5 @@ import com.stxpy.data.presenter.PlayEditListPresenter;
 @Component(modules = {HttpModule.class})
 public interface HttpComponent {
     void inject(PlayEditListPresenter playEditListPresenter);
+    void inject(LoginPresenter loginPresenter);
 }

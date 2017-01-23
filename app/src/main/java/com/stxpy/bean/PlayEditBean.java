@@ -40,6 +40,27 @@ public class PlayEditBean {
     private String LogName;
     private String PlayTypeName;
 
+    @Override
+    public String toString() {
+        return "PlayEditBean{" +
+                "ID=" + ID +
+                ", Name='" + Name + '\'' +
+                ", OrderNO=" + OrderNO +
+                ", StarTime='" + StarTime + '\'' +
+                ", EndTime='" + EndTime + '\'' +
+                ", ProgType='" + ProgType + '\'' +
+                ", ProgSourID=" + ProgSourID +
+                ", OrgID=" + OrgID +
+                ", UserID=" + UserID +
+                ", PlayType=" + PlayType +
+                ", orgname='" + orgname + '\'' +
+                ", State='" + State + '\'' +
+                ", ProgramName='" + ProgramName + '\'' +
+                ", LogName='" + LogName + '\'' +
+                ", PlayTypeName='" + PlayTypeName + '\'' +
+                '}';
+    }
+
     public int getID() {
         return ID;
     }

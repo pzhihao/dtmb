@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import me.yokeyword.fragmentation.SupportFragment;
 import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
@@ -41,6 +43,8 @@ import com.stxpy.dtmb.R;
  */
 public class ProgramFragment extends SupportFragment implements PlayEditListView {
 
+    private static final Logger l=Logger.getLogger("ProgramFragment");
+    Button button;
 
     public ProgramFragment() {
         // Required empty public constructor
@@ -78,6 +82,7 @@ public class ProgramFragment extends SupportFragment implements PlayEditListView
                 pop();
                 break;
             case R.id.serach:
+                //TODO 事件穿透到下面了
                 drawerLayout.openDrawer(GravityCompat.END);
                 break;
         }
@@ -94,6 +99,14 @@ public class ProgramFragment extends SupportFragment implements PlayEditListView
         drawerLayout= (DrawerLayout) view.findViewById(R.id.program_drawer);
        programAdapter =new ProgramAdapter(listdata,_mActivity);
         listView.setAdapter(programAdapter);
+
+        button= (Button) view.findViewById(R.id.click);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(_mActivity, "点击了", Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
     }
 
@@ -131,6 +144,9 @@ public class ProgramFragment extends SupportFragment implements PlayEditListView
             Log.v("Main",list.get(i).getName());
         }
         listdata.addAll(list);
+        String s = list.toString();
+
+        l.info("信息："+s);
 
     }
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="stxpy.stxpy.fragment.broadcast.child.ProgramFragment">
+    tools:context="com.stxpy.fragment.broadcast.child.ProgramFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/toolbar"></include>
@@ -27,6 +27,7 @@
         </LinearLayout>
 
         <FrameLayout
+            android:clickable="true"
             android:id="@+id/right_panel"
             android:layout_gravity="end"
             android:layout_width="240dp"
@@ -36,6 +37,11 @@
             android:text="右侧搜索区域"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+            <Button
+                android:text="点击"
+                android:id="@+id/click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </FrameLayout>
 
     </android.support.v4.widget.DrawerLayout>

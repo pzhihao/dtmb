@@ -19,7 +19,6 @@ import com.stxpy.constant.URL;
 
 import com.stxpy.dagger.component.DaggerHttpComponent;
 import com.stxpy.dagger.component.HttpComponent;
-import com.stxpy.dagger.module.HttpModule;
 import com.stxpy.data.view.PlayEditListView;
 import com.stxpy.service.PlayEditService;
 
@@ -31,28 +30,19 @@ public class PlayEditListPresenter {
 
 
     private PlayEditListView playEditListView;
+
     @Inject
     PlayEditService editService;
 
     public PlayEditListPresenter(PlayEditListView playEditListView) {
         this.playEditListView = playEditListView;
-        HttpComponent build = DaggerHttpComponent.builder().httpModule(new HttpModule()).build();
+        HttpComponent build = DaggerHttpComponent.builder().build();
         build.inject(this);
     }
 
     public void getPlayEditList(String orgid, String selectedorgid, String state){
 
-        Retrofit retrofit=new Retrofit.Builder()
-                .baseUrl(URL.baseURL)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
         playEditListView.getPlayEditListbefore();
-
-
-
-        PlayEditService playEditService = retrofit.create(PlayEditService.class);
 
         editService.getplayeditlist(orgid,selectedorgid,state)
                 .subscribeOn(Schedulers.io())

@@ -103,13 +103,26 @@ public class ProgramAdapter extends BaseExpandableListAdapter {
         if (convertView == null){
             childHolder=new ChildHolder();
             convertView=LayoutInflater.from(context).inflate(R.layout.program_child,parent,false);
-            childHolder.textView= (TextView) convertView.findViewById(R.id.program_child);
+            childHolder.textView= (TextView) convertView.findViewById(R.id.program_name);
+            childHolder.danwei= (TextView) convertView.findViewById(R.id.program_danwei);
+            childHolder.user= (TextView) convertView.findViewById(R.id.program_user);
+            childHolder.program_name= (TextView) convertView.findViewById(R.id.program_name2);
+            childHolder.zhouqi= (TextView) convertView.findViewById(R.id.program_zhouqi);
+            childHolder.startTime= (TextView) convertView.findViewById(R.id.program_startTime);
+            childHolder.endTime= (TextView) convertView.findViewById(R.id.program_endTime);
+            childHolder.status= (TextView) convertView.findViewById(R.id.program_status);
             convertView.setTag(childHolder);
         }else {
             childHolder= (ChildHolder) convertView.getTag();
         }
         childHolder.textView.setText(listview.get(groupPosition).getProgramName());
-
+        childHolder.danwei.setText(listview.get(groupPosition).getOrgname());
+        childHolder.user.setText(listview.get(groupPosition).getLogName());
+        childHolder.program_name.setText(listview.get(groupPosition).getProgramName());
+        childHolder.zhouqi.setText(listview.get(groupPosition).getPlayTypeName());
+        childHolder.startTime.setText(listview.get(groupPosition).getStarTime());
+        childHolder.endTime.setText(listview.get(groupPosition).getEndTime());
+        childHolder.status.setText(listview.get(groupPosition).getState());
 
 
         return convertView;
@@ -125,6 +138,13 @@ public class ProgramAdapter extends BaseExpandableListAdapter {
     }
     class ChildHolder{
         public TextView textView;
+        public TextView danwei;
+        public TextView user;
+        TextView program_name;
+        TextView zhouqi;
+        TextView startTime;
+        TextView endTime;
+        TextView status;
     }
 }
 

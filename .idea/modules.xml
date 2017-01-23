@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dtmb.iml" filepath="$PROJECT_DIR$/dtmb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rippleView/rippleView.iml" filepath="$PROJECT_DIR$/rippleView/rippleView.iml" />
     </modules>
   </component>
 </project>

@@ -28,6 +28,13 @@ public class SystemManagerFragment extends SupportFragment {
     @Override
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
+
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         loadRootFragment(R.id.fl_brodcast_container,new SystemmanagerHomeFragment());
+
     }
 }
